@@ -21,7 +21,7 @@ if __name__ == "__main__":
 
     #using the same learnig rate alpha and epochs
     alpha  = 0.1
-    epochs = 20000
+    epochs = 200
 
     #for this problem, we are setting:
     #  - two neurons in the input layer (a point (x,y))
@@ -70,3 +70,5 @@ if __name__ == "__main__":
     total_error, false_positives, false_negatives = calculate_errors(expected_vs_predicted)
 
     draw_dataset(predictedset, [total_error, false_positives, false_negatives])
+
+    input("Press Enter to finish...")
