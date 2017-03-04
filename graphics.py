@@ -45,7 +45,7 @@ def draw_dataset(dataset, errors = None):
                 horizontalalignment = 'left',
                 verticalalignment   = 'center')
 
-    plt.show()
+    plt.show(block=False)
 
 
 def draw_cost_curve(trainset, iter_vs_cost, alpha, neurons):
@@ -69,4 +69,4 @@ def draw_cost_curve(trainset, iter_vs_cost, alpha, neurons):
             bbox=dict(facecolor = 'blue', alpha=0.2),
             horizontalalignment = 'left',
             verticalalignment   = 'center')
-    plt.show()
+    plt.show(block=False)

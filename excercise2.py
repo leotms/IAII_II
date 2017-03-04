@@ -20,7 +20,7 @@ if __name__ == "__main__":
     # drawing testset
 
     #using the same learnig rate alpha and epochs
-    alpha  = 0.3
+    alpha  = 0.1
     epochs = 20000
 
     #for this problem, we are setting:
@@ -32,18 +32,41 @@ if __name__ == "__main__":
 
 
     # Initializing network for Trainset 1 N500. Neurons = 2.
+    datasetname = 'Trainset 1 N500'
     neurons = 2
     network = initialize(n_inputs, neurons, n_outputs)
 
-    print("Training...")
+    print("Training %s with %d neurons, %d epochs and alpha = %f..."%(datasetname, neurons, epochs, alpha))
     iter_vs_cost = train(network, trainset1, alpha, epochs, n_outputs)
     print("Done.")
 
     # Draw the cost curve
-    draw_cost_curve("Trainset 1 N500", iter_vs_cost, alpha, neurons)
+    draw_cost_curve(datasetname, iter_vs_cost, alpha, neurons)
 
     print("Predicting...")
-    predictedset = calculate_predictions(network, testset)
+    predictedset, expected_vs_predicted = calculate_predictions(network, testset)
     print("Done.")
-    
-    draw_dataset(predictedset)
+
+    total_error, false_positives, false_negatives = calculate_errors(expected_vs_predicted)
+
+    draw_dataset(predictedset, [total_error, false_positives, false_negatives])
+
+    # Initializing network for Trainset 1 N500. Neurons = 2.
+    datasetname = 'Trainset 1 N500'
+    neurons = 10
+    network = initialize(n_inputs, neurons, n_outputs)
+
+    print("Training %s with %d neurons, %d epochs and alpha = %f..."%(datasetname, neurons, epochs, alpha))
+    iter_vs_cost = train(network, trainset1, alpha, epochs, n_outputs)
+    print("Done.")
+
+    # Draw the cost curve
+    draw_cost_curve(datasetname, iter_vs_cost, alpha, neurons)
+
+    print("Predicting...")
+    predictedset, expected_vs_predicted = calculate_predictions(network, testset)
+    print("Done.")
+
+    total_error, false_positives, false_negatives = calculate_errors(expected_vs_predicted)
+
+    draw_dataset(predictedset, [total_error, false_positives, false_negatives])
