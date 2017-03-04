@@ -19,7 +19,7 @@ def split(dataset):
     return inCircleX, inCircleY, outCircleX, outCircleY
 
 
-def draw_dataset(dataset):
+def draw_dataset(dataset, errors = None):
 
     inCircleX, inCircleY, outCircleX, outCircleY = split(dataset)
 
@@ -32,7 +32,21 @@ def draw_dataset(dataset):
     p2 = plt.scatter(outCircleX, outCircleY, c='c', marker='.', label = "Points outside circle.")
     plt.legend(loc=2)
 
+    if errors:
+        total_values = len(dataset)
+        total_error = errors[0]
+        false_positives = errors[1]
+        false_negatives = errors[2]
+
+        info  = "Training Error: %f\nFalse Positives: %d  %.3f %% \nFalse Negatives: %d  %.3f %%  \n"%(total_error, false_positives, 100*false_positives/total_values, false_negatives, 100*false_negatives/total_values)
+
+        plt.figtext(0.4, 0.8, info,
+                bbox=dict(facecolor = 'white', alpha=0.5),
+                horizontalalignment = 'left',
+                verticalalignment   = 'center')
+
     plt.show()
+
 
 def draw_cost_curve(trainset, iter_vs_cost, alpha, neurons):
 

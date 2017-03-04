@@ -140,8 +140,8 @@ def train(network, trainset, alpha, n_epoch, n_outputs):
             backpropagation(network, expected)
             update_weights(network, row, alpha)
 
-            iter_vs_cost[0].append(epoch)
-            iter_vs_cost[1].append(cost)
+        iter_vs_cost[0].append(epoch)
+        iter_vs_cost[1].append(cost)
             # print('> epoch=%d, alpha=%.3f, error=%.10f' % (epoch, alpha, cost))
 
     #the last error in the cosv_vs_iterations[0] is the min
@@ -152,7 +152,7 @@ def predict(network, row):
     return output.index(max(output))
 
 def calculate_predictions(network, testset):
-    predictedset = [],
+    predictedset = []
     expected_vs_predicted = []
     for row in testset:
         prediction = predict(network, row)
