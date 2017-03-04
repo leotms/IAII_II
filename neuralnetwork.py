@@ -1,5 +1,51 @@
+import numpy  as np
+import pandas as pd
 from random import random, seed
 from math   import exp
+
+def normalize(dataset):
+    '''
+        Normalizes the data provided in dataset using min-max method.
+    '''
+    vector_min = []
+    vector_max = []
+
+    #this is the normalized version of X
+    normalizedDataset = dataset
+
+    n_columns = dataset.shape[1]
+    for i in range(n_columns - 1):
+        m = np.min(dataset[i])
+        M = np.max(dataset[i])
+        print("Min=%f,Max=%f"%(m,M))
+        vector_min.append(m)
+        vector_max.append(M)
+        normalizedDataset[i]  = np.subtract(normalizedDataset[i], m)
+        normalizedDataset[i]  = np.divide(normalizedDataset[i],M - m)
+
+    print type(normalizedDataset)
+    return normalizedDataset, vector_min, vector_max
+
+def readData(trainset):
+
+    dataset = pd.read_csv(trainset,delim_whitespace = True,header = None,index_col = False)
+    dataset, mean, std = normalize(dataset)
+
+    print(dataset)
+
+    #fix the dataset as an array of [x1, x2, x3,..., y]
+    aux_dataset = []
+    for i in range(len(dataset)):
+        row = dataset.iloc[i]
+        aux_row = []
+        for j in range(len(row)):
+            aux_row.append(row[j])
+
+        aux_dataset.append(aux_row)
+
+    dataset = aux_dataset
+
+    return dataset
 
 # Initializing the network
 def initialize(n_inputs, n_hidden, n_outputs):
@@ -26,17 +72,14 @@ def initialize(n_inputs, n_hidden, n_outputs):
     network.append(outputlayer)
     return network
 
-
 def activate_neuron(weights, inputs):
     activation = weights[-1]          #last weight is the bias
     for i in range(len(weights) - 1):
         activation += weights[i] * inputs[i]
     return activation
 
-
 def transfer(activation):
     return 1.0/(1.0 + exp(-activation))
-
 
 def forward_propagate(network, row):
     inputs = row
@@ -49,11 +92,9 @@ def forward_propagate(network, row):
         inputs = new_inputs
     return inputs
 
-
 # this is for backpropagation
 def transfer_derivate(output):
     return output*(1.0 - output)
-
 
 def backpropagation(network, expected):
 
@@ -84,60 +125,63 @@ def update_weights(network, row, alpha):
                 inputs.append(neuron['output'])
         for neuron in network[i]:
             for j in range(len(inputs)):
+
                 neuron['weights'][j] += alpha*neuron['delta']*inputs[j]
             neuron['weights'][-1] += alpha*neuron['delta']
 
 def train(network, trainset, alpha, n_epoch, n_outputs):
+
+    # we save cost vs iterations for the training set
+    iter_vs_cost = [[],[]]
+
     for epoch in range(n_epoch):
-        sum_eror = 0
+        cost = 0
         for row in trainset:
             output   = forward_propagate(network, row)
             expected = [0 for i in range(n_outputs)]
-            expected[row[-1]] = 1
-            sum_eror += sum([(expected[i] - output[i])**2 for i in range(len(expected))])
+            expected[int(row[-1])] = 1
+            cost += sum([(expected[i] - output[i])**2 for i in range(len(expected))]) #this calculates the cost function
             backpropagation(network, expected)
             update_weights(network, row, alpha)
-        print('> epoch=%d, alpha=%.3f, error=%.10f' % (epoch, alpha, sum_eror))
+
+            iter_vs_cost[0].append(epoch)
+            iter_vs_cost[1].append(cost)
+            # print('> epoch=%d, alpha=%.3f, error=%.10f' % (epoch, alpha, cost))
+
+    #the last error in the cosv_vs_iterations[0] is the min
+    return iter_vs_cost
 
 def predict(network, row):
     output = forward_propagate(network, row)
     return output.index(max(output))
 
-# seed(1)
-# network = initialize(2,1,2)
-# for layer in network:
-#     print(layer)
-#
-# row = [1,0,None]
-# output = forward_propagate(network, row)
-#
-# print('Output', output)
-#
-# print('After backpropagation')
-# expected = [0,1]
-# backpropagation(network, expected)
-# for layer in network:
-#     print(layer)
+def calculate_predictions(network, testset):
+    predictedset = [],
+    expected_vs_predicted = []
+    for row in testset:
+        prediction = predict(network, row)
+        # print('Expected=%d, predicted=%d'%(row[-1],prediction))
+        expected_vs_predicted.append([row[-1],prediction])
+        predictedset.append([row[0],row[1],prediction])
 
-seed(1)
-dataset = [[2.7810836,2.550537003,0],
-  [1.465489372,2.362125076,0],
-  [3.396561688,4.400293529,0],
-  [1.38807019,1.850220317,0],
-  [3.06407232,3.005305973,0],
-  [7.627531214,2.759262235,1],
-  [5.332441248,2.088626775,1],
-  [6.922596716,1.77106367,1],
-  [8.675418651,-0.242068655,1],
-  [7.673756466,3.508563011,1]]
+    return predictedset, expected_vs_predicted
 
-n_inputs = len(dataset[0]) - 1
-n_outputs  = len(set(row[-1] for row in dataset))
-network = initialize(n_inputs, 10, n_outputs)
-train(network, dataset, 0.1, 1000, n_outputs)
-for layer in network:
-    print(layer)
+def calculate_errors(results):
 
-for row in dataset:
-    prediction = predict(network, row)
-    print('Expected=%d, predicted=%d'%(row[-1],prediction))
+    total_error     = 0
+    false_positives = 0
+    false_negatives = 0
+
+
+    #this is the total square errors
+    total_error += sum([(result[0] - result[1])**2 for result in results])
+
+    for result in results:
+        #false positive
+        if result[0] == 0 and result[1] == 1:
+            false_positives += 1
+        #false negative
+        if result[0] == 1 and result[1] == 0:
+            false_negatives += 1
+
+    return total_error, false_positives, false_negatives
