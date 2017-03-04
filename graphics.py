@@ -40,7 +40,7 @@ def draw_dataset(trainset, dataset, neurons, alpha, errors = None):
         false_positives = errors[1]
         false_negatives = errors[2]
 
-        info  = "Training Error: %f\nFalse Positives: %d  %.3f %% \nFalse Negatives: %d  %.3f %%  \n"%(total_error, false_positives, 100*false_positives/total_values, false_negatives, 100*false_negatives/total_values)
+        info  = "Training Error: %f\nFalse Positives: %d  %f %% \nFalse Negatives: %d  %f %%  \n"%(total_error, false_positives, 100*false_positives/total_values, false_negatives, 100*false_negatives/total_values)
 
         plt.figtext(0.4, 0.8, info,
                 bbox=dict(facecolor = 'white', alpha=0.5),
@@ -54,6 +54,9 @@ def draw_cost_curve(trainset, iter_vs_cost, alpha, neurons):
 
     iterations = iter_vs_cost[0]
     cost       = iter_vs_cost[1]
+
+    fig = plt.figure()
+    ax = fig.add_subplot()
 
     p1 = plt.plot(iterations,cost)
     #Labels
