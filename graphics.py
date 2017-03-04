@@ -19,13 +19,15 @@ def split(dataset):
     return inCircleX, inCircleY, outCircleX, outCircleY
 
 
-def draw_dataset(dataset, errors = None):
+def draw_dataset(trainset, dataset, neurons, alpha, errors = None):
 
     inCircleX, inCircleY, outCircleX, outCircleY = split(dataset)
 
     #draw figure
     fig = plt.figure()
     ax = fig.add_subplot()
+
+    plt.title('Testset results using : %s with %d Neurons and Alpha = %f'%(trainset,neurons,alpha))
 
     #plot points inside circle
     p1 = plt.scatter(inCircleX, inCircleY, c='r', marker='.', label = "Points inside circle.")
