@@ -153,26 +153,26 @@ if __name__ == "__main__":
     # #####################################################################
     # #                          TRAINSET 5                               #
     # #####################################################################
-    #
-    # datasetname = 'Trainset 5 N1000'
-    #
-    # for neurons in neuron_range:
-    #     network = init_network(n_inputs, neurons, n_outputs)
-    #
-    #     print("Training %s with %d neurons, %d epochs and alpha = %f..."%(datasetname, neurons, epochs, alpha))
-    #     iter_vs_cost = train(network, trainset5, alpha, epochs, n_outputs)
-    #     print("Done.")
-    #
-    #     # Draw the cost curve
-    #     draw_cost_curve(datasetname, iter_vs_cost, alpha, neurons)
-    #
-    #     print("Predicting...")
-    #     predictedset, expected_vs_predicted = calculate_predictions(network, testset)
-    #     print("Done.")
-    #
-    #     total_error, false_positives, false_negatives = calculate_errors(expected_vs_predicted)
-    #
-    #     draw_dataset(datasetname, predictedset, neurons, alpha, [total_error, false_positives, false_negatives])
+
+    datasetname = 'Trainset 5 N1000'
+
+    for neurons in neuron_range:
+        network = init_network(n_inputs, neurons, n_outputs)
+
+        print("Training %s with %d neurons, %d epochs and alpha = %f..."%(datasetname, neurons, epochs, alpha))
+        iter_vs_cost = train(network, trainset5, alpha, epochs, n_outputs)
+        print("Done.")
+
+        # Draw the cost curve
+        draw_cost_curve(datasetname, iter_vs_cost, alpha, neurons)
+
+        print("Predicting...")
+        predictedset, expected_vs_predicted = calculate_predictions(network, testset)
+        print("Done.")
+
+        total_error, false_positives, false_negatives = calculate_errors(expected_vs_predicted)
+
+        draw_dataset(datasetname, predictedset, neurons, alpha, [total_error, false_positives, false_negatives])
     #
     # #####################################################################
     # #                          TRAINSET 6                               #
