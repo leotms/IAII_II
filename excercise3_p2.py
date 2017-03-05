@@ -69,6 +69,61 @@ def readDataE3(trainset, normalize = False):
 
     return dataset
 
+def calculate_errors_multiclas(results):
+    '''
+        Calculates errors for obtained results.
+        Total MSE for Testing.
+        # of False Positives
+        # of False Negatives
+    '''
+    total_error     = 0
+    c1_false_positives = 0
+    c1_false_negatives = 0
+    c2_false_positives = 0
+    c2_false_negatives = 0
+    c3_false_positives = 0
+    c3_false_negatives = 0
+
+
+    #this is the total MSQ for testing
+    print(len(results))
+    total_error += (1/len(results)) * sum([(result[0] - result[1])**2 for result in results])
+
+    for result in results:
+        #false positives for c1
+        if result[0] == 1 and result[1] == 0:
+            c1_false_positives += 1
+        if result[0] == 2 and result[1] == 0:
+            c1_false_positives += 1
+        #false positives for c2
+        if result[0] == 0 and result[1] == 1:
+            c2_false_positives += 1
+        if result[0] == 2 and result[1] == 1:
+            c2_false_positives += 1
+        #false positives for c3
+        if result[0] == 0 and result[1] == 2:
+            c3_false_positives += 1
+        if result[0] == 1 and result[1] == 2:
+            c3_false_positives += 1
+        #false negatives for c1
+        if result[0] == 0 and result[1] == 1:
+            c1_false_negatives += 1
+        if result[0] == 0 and result[1] == 2:
+            c1_false_negatives += 1
+        #false negatives for c2
+        if result[0] == 1 and result[1] == 0:
+            c2_false_negatives += 1
+        if result[0] == 1 and result[1] == 2:
+            c2_false_negatives += 1
+        #false negatives for c3
+        if result[0] == 2 and result[1] == 0:
+            c3_false_negatives += 1
+        if result[0] == 2 and result[1] == 1:
+            c3_false_negatives += 1
+
+    return total_error, c1_false_positives, c1_false_negatives, c2_false_positives, c2_false_negatives, c3_false_positives, c3_false_negatives
+
+
 if __name__ == "__main__":
 
     #loading datasets for E3 part 1
@@ -117,137 +172,173 @@ if __name__ == "__main__":
         predictedset, expected_vs_predicted = calculate_predictions(network, testset50)
         print("Done.")
 
-        print(expected_vs_predicted)
-        # total_error, false_positives, false_negatives = calculate_errors(expected_vs_predicted)
+
+        total_error, c1_fp, c1_fn, c2_fp, c2_fn, c3_fp, c3_fn = calculate_errors_multiclas(expected_vs_predicted)
+
+        # C1 "Iris-setosa"
+        # C2 "Iris-versicolor"
+        # C3 "Iris-virginica"
 
         print("---- RESULTS %s NEURONS = %d EPOCHS = %d ALPHA = %f----"%(datasetname, neurons, epochs, alpha))
         print("Max Training Cost: %f"%(np.max(iter_vs_cost[1])))
         print("Min Training Cost: %f"%(np.min(iter_vs_cost[1])))
         print("Testing Error: %f"%(total_error))
-        print("False Positives: %d"%(false_positives))
-        print("False Negatives: %d"%(false_negatives))
-        print("Total Error %% : %d"%(100*(false_positives*false_negatives)/len(testset50)))
+        print("False Positives Iris-Setosa: %d"%(c1_fp))
+        print("False Negatives Iris-Setosa: %d"%(c1_fn))
+        print("False Positives Iris-Versicolor: %d"%(c2_fp))
+        print("False Negatives Iris-Versicolor: %d"%(c2_fn))
+        print("False Positives Iris-Virginica: %d"%(c3_fp))
+        print("False Negatives Iris-Virginica: %d"%(c3_fn))
+        print("Total Error %% : %d"%(100*((c1_fp + c1_fn + c2_fp + c2_fn + c3_fp + c3_fn)/2)/len(testset50)))
         print("--------------------")
 
-    # #####################################################################
-    # #                          TRAINSET 60%                             #
-    # #####################################################################
-    #
-    # datasetname = 'Trainset 60%% Binary Classification'
-    #
-    # for neurons in neuron_range:
-    #     network = init_network(n_inputs, neurons, n_outputs)
-    #
-    #     print("Training %s with %d neurons, %d epochs and alpha = %f..."%(datasetname, neurons, epochs, alpha))
-    #     iter_vs_cost = train(network, trainset60, alpha, epochs, n_outputs)
-    #     print("Done.")
-    #
-    #     print("Predicting using 50%% of the remaining data...")
-    #     predictedset, expected_vs_predicted = calculate_predictions(network, testset60)
-    #     print("Done.")
-    #
-    #
-    #
-    #     total_error, false_positives, false_negatives = calculate_errors(expected_vs_predicted)
-    #
-    #     print("---- RESULTS %s NEURONS = %d EPOCHS = %d ALPHA = %f----"%(datasetname, neurons, epochs, alpha))
-    #     print("Max Training Cost: %f"%(np.max(iter_vs_cost[1])))
-    #     print("Min Training Cost: %f"%(np.min(iter_vs_cost[1])))
-    #     print("Testing Error: %f"%(total_error))
-    #     print("False Positives: %d"%(false_positives))
-    #     print("False Negatives: %d"%(false_negatives))
-    #     print("Total Error %% : %d"%(100*(false_positives*false_negatives)/len(testset60)))
-    #     print("--------------------")
-    #
-    # #####################################################################
-    # #                          TRAINSET 70%                             #
-    # #####################################################################
-    #
-    # datasetname = 'Trainset 70%% Binary Classification'
-    #
-    # for neurons in neuron_range:
-    #     network = init_network(n_inputs, neurons, n_outputs)
-    #
-    #     print("Training %s with %d neurons, %d epochs and alpha = %f..."%(datasetname, neurons, epochs, alpha))
-    #     iter_vs_cost = train(network, trainset70, alpha, epochs, n_outputs)
-    #     print("Done.")
-    #
-    #     print("Predicting using 50%% of the remaining data...")
-    #     predictedset, expected_vs_predicted = calculate_predictions(network, testset70)
-    #     print("Done.")
-    #
-    #
-    #
-    #     total_error, false_positives, false_negatives = calculate_errors(expected_vs_predicted)
-    #
-    #     print("---- RESULTS %s NEURONS = %d EPOCHS = %d ALPHA = %f----"%(datasetname, neurons, epochs, alpha))
-    #     print("Max Training Cost: %f"%(np.max(iter_vs_cost[1])))
-    #     print("Min Training Cost: %f"%(np.min(iter_vs_cost[1])))
-    #     print("Testing Error: %f"%(total_error))
-    #     print("False Positives: %d"%(false_positives))
-    #     print("False Negatives: %d"%(false_negatives))
-    #     print("Total Error %% : %d"%(100*(false_positives*false_negatives)/len(testset70)))
-    #     print("--------------------")
-    #
-    # #####################################################################
-    # #                          TRAINSET 80%                             #
-    # #####################################################################
-    #
-    # datasetname = 'Trainset 80%% Binary Classification'
-    #
-    # for neurons in neuron_range:
-    #     network = init_network(n_inputs, neurons, n_outputs)
-    #
-    #     print("Training %s with %d neurons, %d epochs and alpha = %f..."%(datasetname, neurons, epochs, alpha))
-    #     iter_vs_cost = train(network, trainset80, alpha, epochs, n_outputs)
-    #     print("Done.")
-    #
-    #     print("Predicting using 50%% of the remaining data...")
-    #     predictedset, expected_vs_predicted = calculate_predictions(network, testset80)
-    #     print("Done.")
-    #
-    #
-    #
-    #     total_error, false_positives, false_negatives = calculate_errors(expected_vs_predicted)
-    #
-    #     print("---- RESULTS %s NEURONS = %d EPOCHS = %d ALPHA = %f----"%(datasetname, neurons, epochs, alpha))
-    #     print("Max Training Cost: %f"%(np.max(iter_vs_cost[1])))
-    #     print("Min Training Cost: %f"%(np.min(iter_vs_cost[1])))
-    #     print("Testing Error: %f"%(total_error))
-    #     print("False Positives: %d"%(false_positives))
-    #     print("False Negatives: %d"%(false_negatives))
-    #     print("Total Error %% : %d"%(100*(false_positives*false_negatives)/len(testset80)))
-    #     print("--------------------")
-    #
-    # #####################################################################
-    # #                          TRAINSET 90%                             #
-    # #####################################################################
-    #
-    # datasetname = 'Trainset 90%% Binary Classification'
-    #
-    # for neurons in neuron_range:
-    #     network = init_network(n_inputs, neurons, n_outputs)
-    #
-    #     print("Training %s with %d neurons, %d epochs and alpha = %f..."%(datasetname, neurons, epochs, alpha))
-    #     iter_vs_cost = train(network, trainset90, alpha, epochs, n_outputs)
-    #     print("Done.")
-    #
-    #     print("Predicting using 50%% of the remaining data...")
-    #     predictedset, expected_vs_predicted = calculate_predictions(network, testset90)
-    #     print("Done.")
-    #
-    #
-    #
-    #     total_error, false_positives, false_negatives = calculate_errors(expected_vs_predicted)
-    #
-    #     print("---- RESULTS %s NEURONS = %d EPOCHS = %d ALPHA = %f----"%(datasetname, neurons, epochs, alpha))
-    #     print("Max Training Cost: %f"%(np.max(iter_vs_cost[1])))
-    #     print("Min Training Cost: %f"%(np.min(iter_vs_cost[1])))
-    #     print("Testing Error: %f"%(total_error))
-    #     print("False Positives: %d"%(false_positives))
-    #     print("False Negatives: %d"%(false_negatives))
-    #     print("Total Error %% : %d"%(100*(false_positives*false_negatives)/len(testset90)))
-    #     print("--------------------")
+    #####################################################################
+    #                          TRAINSET 60%                             #
+    #####################################################################
+
+    datasetname = 'Trainset 60%% Binary Classification'
+
+    for neurons in neuron_range:
+        network = init_network(n_inputs, neurons, n_outputs)
+
+        print("Training %s with %d neurons, %d epochs and alpha = %f..."%(datasetname, neurons, epochs, alpha))
+        iter_vs_cost = train(network, trainset60, alpha, epochs, n_outputs)
+        print("Done.")
+
+        print("Predicting using 60%% of the remaining data...")
+        predictedset, expected_vs_predicted = calculate_predictions(network, testset60)
+        print("Done.")
+
+
+        total_error, c1_fp, c1_fn, c2_fp, c2_fn, c3_fp, c3_fn = calculate_errors_multiclas(expected_vs_predicted)
+
+        # C1 "Iris-setosa"
+        # C2 "Iris-versicolor"
+        # C3 "Iris-virginica"
+
+        print("---- RESULTS %s NEURONS = %d EPOCHS = %d ALPHA = %f----"%(datasetname, neurons, epochs, alpha))
+        print("Max Training Cost: %f"%(np.max(iter_vs_cost[1])))
+        print("Min Training Cost: %f"%(np.min(iter_vs_cost[1])))
+        print("Testing Error: %f"%(total_error))
+        print("False Positives Iris-Setosa: %d"%(c1_fp))
+        print("False Negatives Iris-Setosa: %d"%(c1_fn))
+        print("False Positives Iris-Versicolor: %d"%(c2_fp))
+        print("False Negatives Iris-Versicolor: %d"%(c2_fn))
+        print("False Positives Iris-Virginica: %d"%(c3_fp))
+        print("False Negatives Iris-Virginica: %d"%(c3_fn))
+        print("Total Error %% : %d"%(100*((c1_fp + c1_fn + c2_fp + c2_fn + c3_fp + c3_fn)/2)/len(testset60)))
+        print("--------------------")
+
+    #####################################################################
+    #                          TRAINSET 70%                             #
+    #####################################################################
+
+    datasetname = 'Trainset 70%% Binary Classification'
+
+    for neurons in neuron_range:
+        network = init_network(n_inputs, neurons, n_outputs)
+
+        print("Training %s with %d neurons, %d epochs and alpha = %f..."%(datasetname, neurons, epochs, alpha))
+        iter_vs_cost = train(network, trainset70, alpha, epochs, n_outputs)
+        print("Done.")
+
+        print("Predicting using 70%% of the remaining data...")
+        predictedset, expected_vs_predicted = calculate_predictions(network, testset70)
+        print("Done.")
+
+
+        total_error, c1_fp, c1_fn, c2_fp, c2_fn, c3_fp, c3_fn = calculate_errors_multiclas(expected_vs_predicted)
+
+        # C1 "Iris-setosa"
+        # C2 "Iris-versicolor"
+        # C3 "Iris-virginica"
+
+        print("---- RESULTS %s NEURONS = %d EPOCHS = %d ALPHA = %f----"%(datasetname, neurons, epochs, alpha))
+        print("Max Training Cost: %f"%(np.max(iter_vs_cost[1])))
+        print("Min Training Cost: %f"%(np.min(iter_vs_cost[1])))
+        print("Testing Error: %f"%(total_error))
+        print("False Positives Iris-Setosa: %d"%(c1_fp))
+        print("False Negatives Iris-Setosa: %d"%(c1_fn))
+        print("False Positives Iris-Versicolor: %d"%(c2_fp))
+        print("False Negatives Iris-Versicolor: %d"%(c2_fn))
+        print("False Positives Iris-Virginica: %d"%(c3_fp))
+        print("False Negatives Iris-Virginica: %d"%(c3_fn))
+        print("Total Error %% : %d"%(100*((c1_fp + c1_fn + c2_fp + c2_fn + c3_fp + c3_fn)/2)/len(testset70)))
+        print("--------------------")
+
+    #####################################################################
+    #                          TRAINSET 80%                             #
+    #####################################################################
+
+    datasetname = 'Trainset 80%% Binary Classification'
+
+    for neurons in neuron_range:
+        network = init_network(n_inputs, neurons, n_outputs)
+
+        print("Training %s with %d neurons, %d epochs and alpha = %f..."%(datasetname, neurons, epochs, alpha))
+        iter_vs_cost = train(network, trainset80, alpha, epochs, n_outputs)
+        print("Done.")
+
+        print("Predicting using 80%% of the remaining data...")
+        predictedset, expected_vs_predicted = calculate_predictions(network, testset80)
+        print("Done.")
+
+
+        total_error, c1_fp, c1_fn, c2_fp, c2_fn, c3_fp, c3_fn = calculate_errors_multiclas(expected_vs_predicted)
+
+        # C1 "Iris-setosa"
+        # C2 "Iris-versicolor"
+        # C3 "Iris-virginica"
+
+        print("---- RESULTS %s NEURONS = %d EPOCHS = %d ALPHA = %f----"%(datasetname, neurons, epochs, alpha))
+        print("Max Training Cost: %f"%(np.max(iter_vs_cost[1])))
+        print("Min Training Cost: %f"%(np.min(iter_vs_cost[1])))
+        print("Testing Error: %f"%(total_error))
+        print("False Positives Iris-Setosa: %d"%(c1_fp))
+        print("False Negatives Iris-Setosa: %d"%(c1_fn))
+        print("False Positives Iris-Versicolor: %d"%(c2_fp))
+        print("False Negatives Iris-Versicolor: %d"%(c2_fn))
+        print("False Positives Iris-Virginica: %d"%(c3_fp))
+        print("False Negatives Iris-Virginica: %d"%(c3_fn))
+        print("Total Error %% : %d"%(100*((c1_fp + c1_fn + c2_fp + c2_fn + c3_fp + c3_fn)/2)/len(testset80)))
+        print("--------------------")
+
+    #####################################################################
+    #                          TRAINSET 90%                             #
+    #####################################################################
+
+    datasetname = 'Trainset 90%% Binary Classification'
+
+    for neurons in neuron_range:
+        network = init_network(n_inputs, neurons, n_outputs)
+
+        print("Training %s with %d neurons, %d epochs and alpha = %f..."%(datasetname, neurons, epochs, alpha))
+        iter_vs_cost = train(network, trainset90, alpha, epochs, n_outputs)
+        print("Done.")
+
+        print("Predicting using 90%% of the remaining data...")
+        predictedset, expected_vs_predicted = calculate_predictions(network, testset90)
+        print("Done.")
+
+
+        total_error, c1_fp, c1_fn, c2_fp, c2_fn, c3_fp, c3_fn = calculate_errors_multiclas(expected_vs_predicted)
+
+        # C1 "Iris-setosa"
+        # C2 "Iris-versicolor"
+        # C3 "Iris-virginica"
+
+        print("---- RESULTS %s NEURONS = %d EPOCHS = %d ALPHA = %f----"%(datasetname, neurons, epochs, alpha))
+        print("Max Training Cost: %f"%(np.max(iter_vs_cost[1])))
+        print("Min Training Cost: %f"%(np.min(iter_vs_cost[1])))
+        print("Testing Error: %f"%(total_error))
+        print("False Positives Iris-Setosa: %d"%(c1_fp))
+        print("False Negatives Iris-Setosa: %d"%(c1_fn))
+        print("False Positives Iris-Versicolor: %d"%(c2_fp))
+        print("False Negatives Iris-Versicolor: %d"%(c2_fn))
+        print("False Positives Iris-Virginica: %d"%(c3_fp))
+        print("False Negatives Iris-Virginica: %d"%(c3_fn))
+        print("Total Error %% : %d"%(100*((c1_fp + c1_fn + c2_fp + c2_fn + c3_fp + c3_fn)/2)/len(testset90)))
+        print("--------------------")
 
     try:
         input("Press enter to finish...")
