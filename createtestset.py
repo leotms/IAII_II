@@ -4,7 +4,7 @@ def create_trainset():
 
     points = np.arange(0, 20.2, 0.2)
 
-    f = open('data/datos_P2_TRAINSET.txt', 'w')
+    f = open('data/datos_P2_TESTSET.txt', 'w')
 
     for i in range(len(points)):
         for j in range(len(points)):
