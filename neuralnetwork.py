@@ -67,6 +67,8 @@ def init_network(n_inputs, n_hidden, n_outputs):
             n_outputs: number of neurons in output layer
     '''
     network = list()
+    #initialize seed
+    seed(42)
 
     #creates neurons for hidden layer
     hidden_layer = list()
