@@ -50,7 +50,7 @@ if __name__ == "__main__":
     n_outputs  = 2
 
     #Neurons range between 2 and 10
-    neuron_range = [i for i in range(6,7)]
+    neuron_range = [i for i in range(2,11)]
 
     #####################################################################
     #                          TRAINSET 1                               #
