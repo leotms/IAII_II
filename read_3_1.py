@@ -31,10 +31,12 @@ def normalize(dataset):
 
     return normalizedDataset, vector_min, vector_max
 
-def readData(trainset):
+def readData(trainset, normalize = False):
 
     dataset = pd.read_csv(trainset, delimiter = "," ,header = None,index_col = False)
-    dataset, mean, std = normalize(dataset)
+
+    if normalize:
+        dataset, mean, std = normalize(dataset)
 
     columnNominal=dataset[[4]]
 
@@ -50,7 +52,3 @@ if __name__=="__main__":
 
     destfilepath = './CleanDatasetProcessed_Binary.csv'
     resultData.to_csv(destfilepath , index=False)
-
-
-
-
