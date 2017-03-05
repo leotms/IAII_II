@@ -142,7 +142,7 @@ def train(network, trainset, alpha, n_epoch, n_outputs):
 
         iter_vs_cost[0].append(epoch)
         iter_vs_cost[1].append(cost)
-            # print('> epoch=%d, alpha=%.3f, error=%.10f' % (epoch, alpha, cost))
+        # print('> epoch=%d, alpha=%.3f, error=%.10f' % (epoch, alpha, cost))
 
     #the last error in the cosv_vs_iterations[0] is the min
     return iter_vs_cost
