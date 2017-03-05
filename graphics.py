@@ -30,9 +30,9 @@ def draw_dataset(trainset, dataset, neurons, alpha, errors = None):
     plt.title('Testset results using : %s with %d Neurons and Alpha = %f'%(trainset,neurons,alpha))
 
     #plot points inside circle
-    p1 = plt.scatter(inCircleX, inCircleY, c='#e74c3c', marker='.', label = "Points inside circle.")
-    p2 = plt.scatter(outCircleX, outCircleY, c='#1abc9c', marker='.', label = "Points outside circle.")
-    plt.legend(loc=2)
+    p1 = plt.scatter(inCircleX, inCircleY, c='#e74c3c', marker='.', label = "Inside circle.")
+    p2 = plt.scatter(outCircleX, outCircleY, c='#1abc9c', marker='.', label = "Outside circle.")
+    plt.legend(loc=3)
 
     if errors:
         total_values = len(dataset)
@@ -40,7 +40,7 @@ def draw_dataset(trainset, dataset, neurons, alpha, errors = None):
         false_positives = errors[1]
         false_negatives = errors[2]
 
-        info  = "Training Error: %f\nFalse Positives: %d  %f %% \nFalse Negatives: %d  %f %%  \n"%(total_error, false_positives, 100*false_positives/total_values, false_negatives, 100*false_negatives/total_values)
+        info  = "Testing Error: %f\nFalse Positives: %d\nFalse Negatives: %d\n%% False Predictions: %.6f"%(total_error, false_positives, false_negatives, 100*(false_negatives+false_positives)/total_values)
 
         plt.figtext(0.4, 0.8, info,
                 bbox=dict(facecolor = 'white', alpha=0.5),
@@ -58,7 +58,7 @@ def draw_cost_curve(trainset, iter_vs_cost, alpha, neurons):
     fig = plt.figure()
     ax = fig.add_subplot()
 
-    p1 = plt.plot(iterations,cost)
+    p1 = plt.plot(iterations,cost, c="#3498db")
     #Labels
     plt.xlabel('Iterations')
     plt.ylabel('Cost Function')
