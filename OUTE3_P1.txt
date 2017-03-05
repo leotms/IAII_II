@@ -1,0 +1,458 @@
+Starting...
+Loading data sets...
+Training Trainset 50%% Binary Classification with 4 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+75
+---- RESULTS Trainset 50%% Binary Classification NEURONS = 4 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 23.529952
+Min Training Cost: 0.031647
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 50%% Binary Classification with 5 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+75
+---- RESULTS Trainset 50%% Binary Classification NEURONS = 5 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 32.139896
+Min Training Cost: 0.032323
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 50%% Binary Classification with 6 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+75
+---- RESULTS Trainset 50%% Binary Classification NEURONS = 6 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 29.403197
+Min Training Cost: 0.026179
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 50%% Binary Classification with 7 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+75
+---- RESULTS Trainset 50%% Binary Classification NEURONS = 7 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 23.848601
+Min Training Cost: 0.033217
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 50%% Binary Classification with 8 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+75
+---- RESULTS Trainset 50%% Binary Classification NEURONS = 8 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 32.337585
+Min Training Cost: 0.026074
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 50%% Binary Classification with 9 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+75
+---- RESULTS Trainset 50%% Binary Classification NEURONS = 9 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 35.362520
+Min Training Cost: 0.028804
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 50%% Binary Classification with 10 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+75
+---- RESULTS Trainset 50%% Binary Classification NEURONS = 10 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 36.414706
+Min Training Cost: 0.023701
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 60%% Binary Classification with 4 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+60
+---- RESULTS Trainset 60%% Binary Classification NEURONS = 4 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 27.772692
+Min Training Cost: 0.035502
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 60%% Binary Classification with 5 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+60
+---- RESULTS Trainset 60%% Binary Classification NEURONS = 5 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 37.980620
+Min Training Cost: 0.035601
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 60%% Binary Classification with 6 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+60
+---- RESULTS Trainset 60%% Binary Classification NEURONS = 6 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 34.435932
+Min Training Cost: 0.030731
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 60%% Binary Classification with 7 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+60
+---- RESULTS Trainset 60%% Binary Classification NEURONS = 7 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 28.472308
+Min Training Cost: 0.036882
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 60%% Binary Classification with 8 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+60
+---- RESULTS Trainset 60%% Binary Classification NEURONS = 8 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 38.095737
+Min Training Cost: 0.030367
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 60%% Binary Classification with 9 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+60
+---- RESULTS Trainset 60%% Binary Classification NEURONS = 9 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 42.209713
+Min Training Cost: 0.032104
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 60%% Binary Classification with 10 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+60
+---- RESULTS Trainset 60%% Binary Classification NEURONS = 10 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 43.629493
+Min Training Cost: 0.028115
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 70%% Binary Classification with 4 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+45
+---- RESULTS Trainset 70%% Binary Classification NEURONS = 4 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 31.542141
+Min Training Cost: 0.029401
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 70%% Binary Classification with 5 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+45
+---- RESULTS Trainset 70%% Binary Classification NEURONS = 5 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 43.570894
+Min Training Cost: 0.030713
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 70%% Binary Classification with 6 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+45
+---- RESULTS Trainset 70%% Binary Classification NEURONS = 6 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 38.866699
+Min Training Cost: 0.024606
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 70%% Binary Classification with 7 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+45
+---- RESULTS Trainset 70%% Binary Classification NEURONS = 7 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 32.302637
+Min Training Cost: 0.031029
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 70%% Binary Classification with 8 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+45
+---- RESULTS Trainset 70%% Binary Classification NEURONS = 8 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 43.626981
+Min Training Cost: 0.024495
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 70%% Binary Classification with 9 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+45
+---- RESULTS Trainset 70%% Binary Classification NEURONS = 9 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 49.022311
+Min Training Cost: 0.027130
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 70%% Binary Classification with 10 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+45
+---- RESULTS Trainset 70%% Binary Classification NEURONS = 10 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 50.837242
+Min Training Cost: 0.022214
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 80%% Binary Classification with 4 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+30
+---- RESULTS Trainset 80%% Binary Classification NEURONS = 4 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 35.302040
+Min Training Cost: 0.031215
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 80%% Binary Classification with 5 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+30
+---- RESULTS Trainset 80%% Binary Classification NEURONS = 5 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 48.631755
+Min Training Cost: 0.032218
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 80%% Binary Classification with 6 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+30
+---- RESULTS Trainset 80%% Binary Classification NEURONS = 6 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 42.955022
+Min Training Cost: 0.027113
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 80%% Binary Classification with 7 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+30
+---- RESULTS Trainset 80%% Binary Classification NEURONS = 7 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 36.292927
+Min Training Cost: 0.032654
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 80%% Binary Classification with 8 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+30
+---- RESULTS Trainset 80%% Binary Classification NEURONS = 8 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 48.427737
+Min Training Cost: 0.026743
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 80%% Binary Classification with 9 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+30
+---- RESULTS Trainset 80%% Binary Classification NEURONS = 9 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 55.691535
+Min Training Cost: 0.028823
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 80%% Binary Classification with 10 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+30
+---- RESULTS Trainset 80%% Binary Classification NEURONS = 10 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 57.977840
+Min Training Cost: 0.024852
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 90%% Binary Classification with 4 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+15
+---- RESULTS Trainset 90%% Binary Classification NEURONS = 4 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 38.087858
+Min Training Cost: 0.031715
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 90%% Binary Classification with 5 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+15
+---- RESULTS Trainset 90%% Binary Classification NEURONS = 5 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 53.055956
+Min Training Cost: 0.032685
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 90%% Binary Classification with 6 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+15
+---- RESULTS Trainset 90%% Binary Classification NEURONS = 6 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 45.690604
+Min Training Cost: 0.027884
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 90%% Binary Classification with 7 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+15
+---- RESULTS Trainset 90%% Binary Classification NEURONS = 7 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 38.932933
+Min Training Cost: 0.033032
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 90%% Binary Classification with 8 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+15
+---- RESULTS Trainset 90%% Binary Classification NEURONS = 8 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 52.094009
+Min Training Cost: 0.027475
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 90%% Binary Classification with 9 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+15
+---- RESULTS Trainset 90%% Binary Classification NEURONS = 9 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 62.411200
+Min Training Cost: 0.029469
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Training Trainset 90%% Binary Classification with 10 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+15
+---- RESULTS Trainset 90%% Binary Classification NEURONS = 10 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 65.069206
+Min Training Cost: 0.025691
+Testing Error: 0.000000
+False Positives: 0
+False Negatives: 0
+Total Error % : 0
+--------------------
+Press enter to finish...
