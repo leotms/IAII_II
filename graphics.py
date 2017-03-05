@@ -30,8 +30,8 @@ def draw_dataset(trainset, dataset, neurons, alpha, errors = None):
     plt.title('Testset results using : %s with %d Neurons and Alpha = %f'%(trainset,neurons,alpha))
 
     #plot points inside circle
-    p1 = plt.scatter(inCircleX, inCircleY, c='r', marker='.', label = "Points inside circle.")
-    p2 = plt.scatter(outCircleX, outCircleY, c='c', marker='.', label = "Points outside circle.")
+    p1 = plt.scatter(inCircleX, inCircleY, c='#e74c3c', marker='.', label = "Points inside circle.")
+    p2 = plt.scatter(outCircleX, outCircleY, c='#1abc9c', marker='.', label = "Points outside circle.")
     plt.legend(loc=2)
 
     if errors:
@@ -74,4 +74,21 @@ def draw_cost_curve(trainset, iter_vs_cost, alpha, neurons):
             bbox=dict(facecolor = 'blue', alpha=0.2),
             horizontalalignment = 'left',
             verticalalignment   = 'center')
+    plt.show(block=False)
+
+def draw_cost_curves(trainset, all_iter_vs_cost, alpha, neurons):
+
+    colors = ['#1abc9c', '#3498db', '#8e44ad', '#e74c3c', '#e67e22', '#f1c40f', '#34495e', '#7f8c8d', '#2ecc71']
+
+    fig = plt.figure()
+    ax = fig.add_subplot()
+
+    plt.xlabel('Iterations')
+    plt.ylabel('Cost Function')
+    plt.title('Cost vs. Iterations\n%s with %d Neurons and Alpha = %f'%(trainset,neurons,alpha))
+
+    for i in range(len(all_iter_vs_cost)):
+        p = plt.plot(all_iter_vs_cost[i][0], all_iter_vs_cost[i][1], c=colors[i], marker='.', label = all_iter_vs_cost[i][2])
+
+    plt.legend(loc=1)
     plt.show(block=False)
