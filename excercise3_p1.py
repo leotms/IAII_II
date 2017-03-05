@@ -12,7 +12,6 @@
 import numpy  as np
 import pandas as pd
 from neuralnetwork import *
-from graphics      import draw_dataset_e31, draw_cost_curve
 
 dictNominal={
         "Iris-virginica":0,
@@ -75,13 +74,13 @@ if __name__ == "__main__":
 
     #loading datasets for E3 part 1
     print("Starting...\nLoading data sets...")
-    trainset50 = readData('data/Data_Exercise3/Datos_P3_50B.txt')
-    trainset60 = readData('data/Data_Exercise3/Datos_P3_60B.txt')
-    trainset70 = readData('data/Data_Exercise3/Datos_P3_70B.txt')
-    trainset80 = readData('data/Data_Exercise3/Datos_P3_80B.txt')
-    trainset90 = readData('data/Data_Exercise3/Datos_P3_90B.txt')
+    trainset50 = readDataE3('data/Data_Exercise3/Datos_P3_50B.txt')
+    trainset60 = readDataE3('data/Data_Exercise3/Datos_P3_60B.txt')
+    trainset70 = readDataE3('data/Data_Exercise3/Datos_P3_70B.txt')
+    trainset80 = readDataE3('data/Data_Exercise3/Datos_P3_80B.txt')
+    trainset90 = readDataE3('data/Data_Exercise3/Datos_P3_90B.txt')
 
-    print(trainset50)
+    # print(trainset50)
 
     #drawing datasets
     # draw_dataset(trainset50)
@@ -91,11 +90,11 @@ if __name__ == "__main__":
     # draw_dataset(trainset90)
 
     #load testsets
-    testset50 = readData('data/Data_Exercise3/Datos_P3_50BR.txt')
-    testset60 = readData('data/Data_Exercise3/Datos_P3_60BR.txt')
-    testset70 = readData('data/Data_Exercise3/Datos_P3_70BR.txt')
-    testset80 = readData('data/Data_Exercise3/Datos_P3_80BR.txt')
-    testset90 = readData('data/Data_Exercise3/Datos_P3_90BR.txt')
+    testset50 = readDataE3('data/Data_Exercise3/Datos_P3_50BR.txt')
+    testset60 = readDataE3('data/Data_Exercise3/Datos_P3_60BR.txt')
+    testset70 = readDataE3('data/Data_Exercise3/Datos_P3_70BR.txt')
+    testset80 = readDataE3('data/Data_Exercise3/Datos_P3_80BR.txt')
+    testset90 = readDataE3('data/Data_Exercise3/Datos_P3_90BR.txt')
 
 
     #drawing testset
@@ -110,161 +109,44 @@ if __name__ == "__main__":
     epochs = 20000
 
     #for this problem, we are setting:
-    #  - two neurons in the input layer (a point (x,y))
+    #  - four neurons in the input layer (attributes of examples)
     #  - two neurons in the output layer, since we want to know whether the
-    #    point belongs to the circle or the square.
-    n_inputs   = 2
+    #    example belongs to the Iris Setosa or not.
+    n_inputs   = 4
     n_outputs  = 2
 
     #Neurons range between 2 and 10
     neuron_range = [i for i in range(2,11)]
 
     #####################################################################
-    #                          TRAINSET 1                               #
+    #                          TRAINSET 50%                             #
     #####################################################################
 
-    datasetname = 'Trainset 1 N500'
+    datasetname = 'Trainset 50%% Binary Classification'
 
     for neurons in neuron_range:
         network = init_network(n_inputs, neurons, n_outputs)
 
         print("Training %s with %d neurons, %d epochs and alpha = %f..."%(datasetname, neurons, epochs, alpha))
-        iter_vs_cost = train(network, trainset1, alpha, epochs, n_outputs)
+        iter_vs_cost = train(network, trainset50, alpha, epochs, n_outputs)
         print("Done.")
 
-        # Draw the cost curve
-        draw_cost_curve(datasetname, iter_vs_cost, alpha, neurons)
-
-        print("Predicting...")
-        predictedset, expected_vs_predicted = calculate_predictions(network, testset)
+        print("Predicting using 50%% of the remaining data...")
+        predictedset, expected_vs_predicted = calculate_predictions(network, testset50)
         print("Done.")
+
+        print(expected_vs_predicted)
 
         total_error, false_positives, false_negatives = calculate_errors(expected_vs_predicted)
 
-        draw_dataset(datasetname, predictedset, neurons, alpha, [total_error, false_positives, false_negatives])
-
-    #####################################################################
-    #                          TRAINSET 2                               #
-    #####################################################################
-
-    # datasetname = 'Trainset 2 N1000'
-    #
-    # for neurons in neuron_range:
-    #     network = init_network(n_inputs, neurons, n_outputs)
-    #
-    #     print("Training %s with %d neurons, %d epochs and alpha = %f..."%(datasetname, neurons, epochs, alpha))
-    #     iter_vs_cost = train(network, trainset2, alpha, epochs, n_outputs)
-    #     print("Done.")
-    #
-    #     # Draw the cost curve
-    #     draw_cost_curve(datasetname, iter_vs_cost, alpha, neurons)
-    #
-    #     print("Predicting...")
-    #     predictedset, expected_vs_predicted = calculate_predictions(network, testset)
-    #     print("Done.")
-    #
-    #     total_error, false_positives, false_negatives = calculate_errors(expected_vs_predicted)
-    #
-    #     draw_dataset(datasetname, predictedset, neurons, alpha, [total_error, false_positives, false_negatives])
-    #
-    # #####################################################################
-    # #                          TRAINSET 3                               #
-    # #####################################################################
-    #
-    # datasetname = 'Trainset 3 N2000'
-    #
-    # for neurons in neuron_range:
-    #    network = init_network(n_inputs, neurons, n_outputs)
-    #
-    #    print("Training %s with %d neurons, %d epochs and alpha = %f..."%(datasetname, neurons, epochs, alpha))
-    #    iter_vs_cost = train(network, trainset3, alpha, epochs, n_outputs)
-    #    print("Done.")
-    #
-    #    # Draw the cost curve
-    #    draw_cost_curve(datasetname, iter_vs_cost, alpha, neurons)
-    #
-    #    print("Predicting...")
-    #    predictedset, expected_vs_predicted = calculate_predictions(network, testset)
-    #    print("Done.")
-    #
-    #    total_error, false_positives, false_negatives = calculate_errors(expected_vs_predicted)
-    #
-    #    draw_dataset(datasetname, predictedset, neurons, alpha, [total_error, false_positives, false_negatives])
-    #
-    #
-    # #####################################################################
-    # #                          TRAINSET 4                               #
-    # #####################################################################
-    #
-    # datasetname = 'Trainset 4 N500'
-    #
-    # for neurons in neuron_range:
-    #    network = init_network(n_inputs, neurons, n_outputs)
-    #
-    #    print("Training %s with %d neurons, %d epochs and alpha = %f..."%(datasetname, neurons, epochs, alpha))
-    #    iter_vs_cost = train(network, trainset4, alpha, epochs, n_outputs)
-    #    print("Done.")
-    #
-    #    # Draw the cost curve
-    #    draw_cost_curve(datasetname, iter_vs_cost, alpha, neurons)
-    #
-    #    print("Predicting...")
-    #    predictedset, expected_vs_predicted = calculate_predictions(network, testset)
-    #    print("Done.")
-    #
-    #    total_error, false_positives, false_negatives = calculate_errors(expected_vs_predicted)
-    #
-    #    draw_dataset(datasetname, predictedset, neurons, alpha, [total_error, false_positives, false_negatives])
-    #
-    #
-    # #####################################################################
-    # #                          TRAINSET 5                               #
-    # #####################################################################
-    #
-    # datasetname = 'Trainset 5 N1000'
-    #
-    # for neurons in neuron_range:
-    #     network = init_network(n_inputs, neurons, n_outputs)
-    #
-    #     print("Training %s with %d neurons, %d epochs and alpha = %f..."%(datasetname, neurons, epochs, alpha))
-    #     iter_vs_cost = train(network, trainset5, alpha, epochs, n_outputs)
-    #     print("Done.")
-    #
-    #     # Draw the cost curve
-    #     draw_cost_curve(datasetname, iter_vs_cost, alpha, neurons)
-    #
-    #     print("Predicting...")
-    #     predictedset, expected_vs_predicted = calculate_predictions(network, testset)
-    #     print("Done.")
-    #
-    #     total_error, false_positives, false_negatives = calculate_errors(expected_vs_predicted)
-    #
-    #     draw_dataset(datasetname, predictedset, neurons, alpha, [total_error, false_positives, false_negatives])
-    #
-    # #####################################################################
-    # #                          TRAINSET 6                               #
-    # #####################################################################
-    #
-    # datasetname = 'Trainset 6 N1000'
-    #
-    # for neurons in neuron_range:
-    #    network = init_network(n_inputs, neurons, n_outputs)
-    #
-    #    print("Training %s with %d neurons, %d epochs and alpha = %f..."%(datasetname, neurons, epochs, alpha))
-    #    iter_vs_cost = train(network, trainset6, alpha, epochs, n_outputs)
-    #    print("Done.")
-    #
-    #    # Draw the cost curve
-    #    draw_cost_curve(datasetname, iter_vs_cost, alpha, neurons)
-    #
-    #    print("Predicting...")
-    #    predictedset, expected_vs_predicted = calculate_predictions(network, testset)
-    #    print("Done.")
-    #
-    #    total_error, false_positives, false_negatives = calculate_errors(expected_vs_predicted)
-    #
-    #    draw_dataset(datasetname, predictedset, neurons, alpha, [total_error, false_positives, false_negatives])
-
+        print("---- RESULTS %s NEURONS = %d EPOCHS = %d ALPHA = %f----"%(datasetname, neurons, epochs, alpha))
+        print("Max Training Cost: %f"%(np.max(iter_vs_cost[1])))
+        print("Min Training Cost: %f"%(np.min(iter_vs_cost[1])))
+        print("Testing Error: %f"%(total_error))
+        print("False Positives: %d"%(false_positives))
+        print("False Negatives: %d"%(false_negatives))
+        print("Total Error %% : %d"%(100*(false_positives*false_negatives)/len(testset50)))
+        print("--------------------")
 
     try:
         input("Press enter to finish...")
