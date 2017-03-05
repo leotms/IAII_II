@@ -1,7 +1,21 @@
+'''
+    File:        data_generator.py
+    Description: Generates trainsets for the excercise2 given the number of examples desired.
+    Authors:     Joel Rivas        #11-10866
+                 Leonardo Martinez #11-10576
+                 Nicolas Manan     #06-39883
+    Updated:     03/05/2017
+'''
+
 import random as rd
 import sys
 
 def generate(dataset, quantity):
+
+	'''
+		Generates examples equal in number to quantity and stores them in the file
+		dataset.
+	'''
 
 	file = open(dataset, 'w')
 	count = 1
@@ -35,7 +49,7 @@ def generate(dataset, quantity):
 	file.close()
 
 if __name__ == "__main__":
-	
+
 	dataset = sys.argv[1]
 	quantity = int(sys.argv[2])
 
