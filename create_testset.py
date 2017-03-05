@@ -1,6 +1,18 @@
+'''
+    File:        create_testset.py
+    Description: Creates a testset for excercise2 of a total of 10201 examples.
+    Authors:     Joel Rivas        #11-10866
+                 Leonardo Martinez #11-10576
+                 Nicolas Manan     #06-39883
+    Updated:     03/05/2017
+'''
+
 import numpy as np
 
 def create_trainset():
+    '''
+         Creates a testset for excercise2 of a total of 10201 examples.
+    '''
 
     points = np.arange(0, 20.2, 0.2)
 

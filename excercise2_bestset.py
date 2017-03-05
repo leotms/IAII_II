@@ -1,9 +1,20 @@
+'''
+    File:        excercise2_bestset.py
+    Description: Performs activities related to excercise 2:
+                 Given the best dataset found after checking excercise2.py results.
+                 calculates its graphics and Iterations vs. Cost for each
+                 neural network between 2 and 10 neurons.
+    Authors:     Joel Rivas        #11-10866
+                 Leonardo Martinez #11-10576
+                 Nicolas Manan     #06-39883
+    Updated:     03/05/2017
+'''
 from neuralnetwork import *
 from graphics      import draw_dataset, draw_cost_curve, draw_cost_curves
 
 if __name__ == "__main__":
 
-    #loading dataset
+    #loading dataset. This is the best dataset found.
     besttrainset = readData('./data/datos_P2_EM2017_N500.txt')
 
     #drawing dataset
@@ -16,8 +27,8 @@ if __name__ == "__main__":
     #draw_dataset(testset)
 
     #using the same learnig rate alpha and epochs
-    alpha  = 0.01
-    epochs = 100
+    alpha  = 0.1
+    epochs = 20000
 
     #for this problem, we are setting:
     #  - two neurons in the input layer (a point (x,y))
@@ -39,7 +50,7 @@ if __name__ == "__main__":
     datasetname = 'Trainset 1 N500'
 
     for neurons in neuron_range:
-        network = initialize(n_inputs, neurons, n_outputs)
+        network = init_network(n_inputs, neurons, n_outputs)
 
         print("Training (BEST DATASET) %s with %d neurons, %d epochs and alpha = %f..."%(datasetname, neurons, epochs, alpha))
         iter_vs_cost = train(network, besttrainset, alpha, epochs, n_outputs)
