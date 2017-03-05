@@ -2,8 +2,8 @@
     File:        data_generator.py
     Description: Generates trainsets for the excercise2 given the number of examples desired.
     Authors:     Joel Rivas        #11-10866
-                 Leonardo Martinez #11-10576
                  Nicolas Manan     #06-39883
+                 Leonardo Martinez #11-10576
     Updated:     03/05/2017
 '''
 

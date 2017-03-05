@@ -1,12 +1,10 @@
 '''
-    File:        excercise2.py
-    Description: Performs activities related to excercise 3:
-                 Creates a neural networks between 2 and 10 neurons in the
-                 hidden layer to test 3 pairs of datasets with 500, 1000 and 2000
-                 vectors.
-    Authors:     Joel Rivas        #11-10866
-                 Leonardo Martinez #11-10576
+    File:        excercise3_p1.py
+    Description: Performs activities related to excercise 3, part one:
+                 Predicts a binary classification for Iris Setosa.
+    Authors:     Leonardo Martinez #11-10576
                  Nicolas Manan     #06-39883
+                 Joel Rivas        #11-10866
     Updated:     03/05/2017
 '''
 import numpy  as np

@@ -4,9 +4,9 @@
                  Given the best dataset found after checking excercise2.py results.
                  calculates its graphics and Iterations vs. Cost for each
                  neural network between 2 and 10 neurons.
-    Authors:     Joel Rivas        #11-10866
-                 Leonardo Martinez #11-10576
+    Authors:     Leonardo Martinez #11-10576
                  Nicolas Manan     #06-39883
+                 Joel Rivas        #11-10866
     Updated:     03/05/2017
 '''
 from neuralnetwork import *
@@ -15,7 +15,7 @@ from graphics      import draw_dataset, draw_cost_curve, draw_cost_curves
 if __name__ == "__main__":
 
     #loading dataset. This is the best dataset found.
-    besttrainset = readData('./data/datos_P2_EM2017_N500.txt')
+    besttrainset = readData('./data/datos_P2_EM2017_N2000.txt')
 
     #drawing dataset
     # draw_dataset(besttrainset)
@@ -47,7 +47,7 @@ if __name__ == "__main__":
     #                          BEST DATASET 1                           #
     #####################################################################
 
-    datasetname = 'Trainset 1 N500'
+    datasetname = 'Trainset 3 N2000'
 
     for neurons in neuron_range:
         network = init_network(n_inputs, neurons, n_outputs)
@@ -58,7 +58,7 @@ if __name__ == "__main__":
 
         # Draw the cost curve
         draw_cost_curve(datasetname, iter_vs_cost, alpha, neurons)
-        
+
         # save cost for later
         label = "%d Neurons"%(neurons)
         iter_vs_cost.append(label)

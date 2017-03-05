@@ -1,3 +1,12 @@
+'''
+    File:        graphics.py
+    Description: Provides functions for ploting data and analysis.
+    Authors:     Leonardo Martinez #11-10576
+                 Nicolas Manan     #06-39883
+                 Joel Rivas        #11-10866
+    Updated:     03/05/2017
+'''
+
 import numpy as np
 import matplotlib.pyplot as plt
 
