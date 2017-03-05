@@ -17,21 +17,17 @@ def normalize(dataset):
     for i in range(n_columns - 1):
         m = np.min(dataset[i])
         M = np.max(dataset[i])
-        print("Min=%f,Max=%f"%(m,M))
         vector_min.append(m)
         vector_max.append(M)
         normalizedDataset[i]  = np.subtract(normalizedDataset[i], m)
         normalizedDataset[i]  = np.divide(normalizedDataset[i],M - m)
 
-    print type(normalizedDataset)
     return normalizedDataset, vector_min, vector_max
 
 def readData(trainset):
 
     dataset = pd.read_csv(trainset,delim_whitespace = True,header = None,index_col = False)
     dataset, mean, std = normalize(dataset)
-
-    print(dataset)
 
     #fix the dataset as an array of [x1, x2, x3,..., y]
     aux_dataset = []
@@ -144,8 +140,8 @@ def train(network, trainset, alpha, n_epoch, n_outputs):
             backpropagation(network, expected)
             update_weights(network, row, alpha)
 
-            iter_vs_cost[0].append(epoch)
-            iter_vs_cost[1].append(cost)
+        iter_vs_cost[0].append(epoch)
+        iter_vs_cost[1].append(cost)
             # print('> epoch=%d, alpha=%.3f, error=%.10f' % (epoch, alpha, cost))
 
     #the last error in the cosv_vs_iterations[0] is the min
@@ -156,7 +152,7 @@ def predict(network, row):
     return output.index(max(output))
 
 def calculate_predictions(network, testset):
-    predictedset = [],
+    predictedset = []
     expected_vs_predicted = []
     for row in testset:
         prediction = predict(network, row)
