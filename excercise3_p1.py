@@ -127,7 +127,7 @@ if __name__ == "__main__":
         print("Testing Error: %f"%(total_error))
         print("False Positives: %d"%(false_positives))
         print("False Negatives: %d"%(false_negatives))
-        print("Total Error %% : %d"%(100*(false_positives*false_negatives)/len(testset50)))
+        print("Total Error %% : %d"%(100*(false_positives+false_negatives)/len(testset50)))
         print("--------------------")
 
     #####################################################################
@@ -157,7 +157,7 @@ if __name__ == "__main__":
         print("Testing Error: %f"%(total_error))
         print("False Positives: %d"%(false_positives))
         print("False Negatives: %d"%(false_negatives))
-        print("Total Error %% : %d"%(100*(false_positives*false_negatives)/len(testset60)))
+        print("Total Error %% : %d"%(100*(false_positives+false_negatives)/len(testset60)))
         print("--------------------")
 
     #####################################################################
@@ -187,7 +187,7 @@ if __name__ == "__main__":
         print("Testing Error: %f"%(total_error))
         print("False Positives: %d"%(false_positives))
         print("False Negatives: %d"%(false_negatives))
-        print("Total Error %% : %d"%(100*(false_positives*false_negatives)/len(testset70)))
+        print("Total Error %% : %d"%(100*(false_positives+false_negatives)/len(testset70)))
         print("--------------------")
 
     #####################################################################
@@ -217,7 +217,7 @@ if __name__ == "__main__":
         print("Testing Error: %f"%(total_error))
         print("False Positives: %d"%(false_positives))
         print("False Negatives: %d"%(false_negatives))
-        print("Total Error %% : %d"%(100*(false_positives*false_negatives)/len(testset80)))
+        print("Total Error %% : %d"%(100*(false_positives+false_negatives)/len(testset80)))
         print("--------------------")
 
     #####################################################################
@@ -247,7 +247,7 @@ if __name__ == "__main__":
         print("Testing Error: %f"%(total_error))
         print("False Positives: %d"%(false_positives))
         print("False Negatives: %d"%(false_negatives))
-        print("Total Error %% : %d"%(100*(false_positives*false_negatives)/len(testset90)))
+        print("Total Error %% : %d"%(100*(false_positives+false_negatives)/len(testset90)))
         print("--------------------")
 
     try:
