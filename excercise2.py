@@ -63,6 +63,7 @@ if __name__ == "__main__":
 
        draw_dataset(datasetname, predictedset, neurons, alpha, [total_error, false_positives, false_negatives])
 
+
     #####################################################################
     #                          TRAINSET 2                               #
     #####################################################################
@@ -111,6 +112,7 @@ if __name__ == "__main__":
 
        draw_dataset(datasetname, predictedset, neurons, alpha, [total_error, false_positives, false_negatives])
 
+
     #####################################################################
     #                          TRAINSET 4                               #
     #####################################################################
@@ -134,6 +136,7 @@ if __name__ == "__main__":
        total_error, false_positives, false_negatives = calculate_errors(expected_vs_predicted)
 
        draw_dataset(datasetname, predictedset, neurons, alpha, [total_error, false_positives, false_negatives])
+
 
     #####################################################################
     #                          TRAINSET 5                               #
@@ -182,6 +185,7 @@ if __name__ == "__main__":
        total_error, false_positives, false_negatives = calculate_errors(expected_vs_predicted)
 
        draw_dataset(datasetname, predictedset, neurons, alpha, [total_error, false_positives, false_negatives])
+
 
     try:
         input("Press enter to finish...")

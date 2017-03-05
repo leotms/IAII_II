@@ -92,6 +92,9 @@ def forward_propagate(network, row):
 def transfer_derivate(output):
     return output*(1.0 - output)
 
+# def transfer_derivate(output):
+#     return ((output + 0.0004) - (output - 0.0004))/(2*0.0004)
+
 def backpropagation(network, expected):
 
     #calculate errors
@@ -123,6 +126,7 @@ def update_weights(network, row, alpha):
             for j in range(len(inputs)):
 
                 neuron['weights'][j] += alpha*neuron['delta']*inputs[j]
+            #weight for
             neuron['weights'][-1] += alpha*neuron['delta']
 
 def train(network, trainset, alpha, n_epoch, n_outputs):
@@ -142,9 +146,8 @@ def train(network, trainset, alpha, n_epoch, n_outputs):
 
         iter_vs_cost[0].append(epoch)
         iter_vs_cost[1].append(cost)
-            # print('> epoch=%d, alpha=%.3f, error=%.10f' % (epoch, alpha, cost))
-
-    #the last error in the cosv_vs_iterations[0] is the min
+        # print('> Epoch=%d, Alpha=%.3f, Cost=%.10f' % (epoch, alpha, cost))
+        
     return iter_vs_cost
 
 def predict(network, row):
