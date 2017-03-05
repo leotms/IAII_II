@@ -20,7 +20,7 @@ if __name__ == "__main__":
     # draw_dataset(trainset6)
 
     #load testset
-    testset =  readData('./data/datos_P2_TRAINSET.txt')
+    testset =  readData('./data/datos_P2_TESTSET.txt')
 
     #draw_dataset(testset)
     # drawing testset
