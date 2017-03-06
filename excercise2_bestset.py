@@ -15,7 +15,7 @@ from graphics      import draw_dataset, draw_cost_curve, draw_cost_curves
 if __name__ == "__main__":
 
     #loading dataset. This is the best dataset found.
-    besttrainset = readData('./data/datos_P2_EM2017_N2000.txt')
+    besttrainset = readData('./data/datos_P2_EM2017_N2000_2.txt')
 
     #drawing dataset
     # draw_dataset(besttrainset)
@@ -47,7 +47,7 @@ if __name__ == "__main__":
     #                          BEST DATASET 1                           #
     #####################################################################
 
-    datasetname = 'Trainset 3 N2000'
+    datasetname = 'Trainset 6 N2000'
 
     for neurons in neuron_range:
         network = init_network(n_inputs, neurons, n_outputs)
