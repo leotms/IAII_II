@@ -235,7 +235,6 @@ def calculate_errors(results):
 
 
     #this is the total MSQ for testing
-    print(len(results))
     total_error += (1/len(results)) * sum([(result[0] - result[1])**2 for result in results])
 
     for result in results:

@@ -1,0 +1,597 @@
+Starting...
+Loading data sets...
+Training Trainset 50%% Binary Classification with 4 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+75
+---- RESULTS Trainset 50%% Binary Classification NEURONS = 4 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 33.639047
+Min Training Cost: 1.956026
+Testing Error: 0.026667
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 2
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 2
+Total Error % : 2
+--------------------
+Training Trainset 50%% Binary Classification with 5 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+75
+---- RESULTS Trainset 50%% Binary Classification NEURONS = 5 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 36.668418
+Min Training Cost: 1.724866
+Testing Error: 0.026667
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 2
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 2
+Total Error % : 2
+--------------------
+Training Trainset 50%% Binary Classification with 6 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+75
+---- RESULTS Trainset 50%% Binary Classification NEURONS = 6 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 35.487963
+Min Training Cost: 1.807889
+Testing Error: 0.026667
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 2
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 2
+Total Error % : 2
+--------------------
+Training Trainset 50%% Binary Classification with 7 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+75
+---- RESULTS Trainset 50%% Binary Classification NEURONS = 7 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 36.402884
+Min Training Cost: 1.738804
+Testing Error: 0.026667
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 2
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 2
+Total Error % : 2
+--------------------
+Training Trainset 50%% Binary Classification with 8 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+75
+---- RESULTS Trainset 50%% Binary Classification NEURONS = 8 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 40.110593
+Min Training Cost: 1.787320
+Testing Error: 0.026667
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 2
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 2
+Total Error % : 2
+--------------------
+Training Trainset 50%% Binary Classification with 9 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+75
+---- RESULTS Trainset 50%% Binary Classification NEURONS = 9 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 45.645755
+Min Training Cost: 1.815346
+Testing Error: 0.026667
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 2
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 2
+Total Error % : 2
+--------------------
+Training Trainset 50%% Binary Classification with 10 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 50%% of the remaining data...
+Done.
+75
+---- RESULTS Trainset 50%% Binary Classification NEURONS = 10 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 48.452859
+Min Training Cost: 1.783438
+Testing Error: 0.026667
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 2
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 2
+Total Error % : 2
+--------------------
+Training Trainset 60%% Binary Classification with 4 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 60%% of the remaining data...
+Done.
+60
+---- RESULTS Trainset 60%% Binary Classification NEURONS = 4 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 38.381915
+Min Training Cost: 1.984459
+Testing Error: 0.016667
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 1
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 1
+Total Error % : 1
+--------------------
+Training Trainset 60%% Binary Classification with 5 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 60%% of the remaining data...
+Done.
+60
+---- RESULTS Trainset 60%% Binary Classification NEURONS = 5 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 41.621181
+Min Training Cost: 1.803100
+Testing Error: 0.016667
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 1
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 1
+Total Error % : 1
+--------------------
+Training Trainset 60%% Binary Classification with 6 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 60%% of the remaining data...
+Done.
+60
+---- RESULTS Trainset 60%% Binary Classification NEURONS = 6 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 41.435530
+Min Training Cost: 1.881171
+Testing Error: 0.016667
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 1
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 1
+Total Error % : 1
+--------------------
+Training Trainset 60%% Binary Classification with 7 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 60%% of the remaining data...
+Done.
+60
+---- RESULTS Trainset 60%% Binary Classification NEURONS = 7 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 41.757116
+Min Training Cost: 1.827861
+Testing Error: 0.016667
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 1
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 1
+Total Error % : 1
+--------------------
+Training Trainset 60%% Binary Classification with 8 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 60%% of the remaining data...
+Done.
+60
+---- RESULTS Trainset 60%% Binary Classification NEURONS = 8 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 46.199514
+Min Training Cost: 1.869659
+Testing Error: 0.016667
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 1
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 1
+Total Error % : 1
+--------------------
+Training Trainset 60%% Binary Classification with 9 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 60%% of the remaining data...
+Done.
+60
+---- RESULTS Trainset 60%% Binary Classification NEURONS = 9 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 53.189468
+Min Training Cost: 1.868986
+Testing Error: 0.016667
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 1
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 1
+Total Error % : 1
+--------------------
+Training Trainset 60%% Binary Classification with 10 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 60%% of the remaining data...
+Done.
+60
+---- RESULTS Trainset 60%% Binary Classification NEURONS = 10 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 58.035362
+Min Training Cost: 1.863630
+Testing Error: 0.016667
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 1
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 1
+Total Error % : 1
+--------------------
+Training Trainset 70%% Binary Classification with 4 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 70%% of the remaining data...
+Done.
+45
+---- RESULTS Trainset 70%% Binary Classification NEURONS = 4 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 42.629978
+Min Training Cost: 1.775510
+Testing Error: 0.000000
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 0
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 0
+Total Error % : 0
+--------------------
+Training Trainset 70%% Binary Classification with 5 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 70%% of the remaining data...
+Done.
+45
+---- RESULTS Trainset 70%% Binary Classification NEURONS = 5 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 47.014808
+Min Training Cost: 1.628615
+Testing Error: 0.000000
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 0
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 0
+Total Error % : 0
+--------------------
+Training Trainset 70%% Binary Classification with 6 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 70%% of the remaining data...
+Done.
+45
+---- RESULTS Trainset 70%% Binary Classification NEURONS = 6 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 46.916276
+Min Training Cost: 1.695151
+Testing Error: 0.000000
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 0
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 0
+Total Error % : 0
+--------------------
+Training Trainset 70%% Binary Classification with 7 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 70%% of the remaining data...
+Done.
+45
+---- RESULTS Trainset 70%% Binary Classification NEURONS = 7 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 46.820422
+Min Training Cost: 1.650556
+Testing Error: 0.000000
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 0
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 0
+Total Error % : 0
+--------------------
+Training Trainset 70%% Binary Classification with 8 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 70%% of the remaining data...
+Done.
+45
+---- RESULTS Trainset 70%% Binary Classification NEURONS = 8 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 53.061240
+Min Training Cost: 1.665571
+Testing Error: 0.000000
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 0
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 0
+Total Error % : 0
+--------------------
+Training Trainset 70%% Binary Classification with 9 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 70%% of the remaining data...
+Done.
+45
+---- RESULTS Trainset 70%% Binary Classification NEURONS = 9 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 60.392167
+Min Training Cost: 1.669830
+Testing Error: 0.000000
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 0
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 0
+Total Error % : 0
+--------------------
+Training Trainset 70%% Binary Classification with 10 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 70%% of the remaining data...
+Done.
+45
+---- RESULTS Trainset 70%% Binary Classification NEURONS = 10 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 67.516309
+Min Training Cost: 1.659271
+Testing Error: 0.000000
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 0
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 0
+Total Error % : 0
+--------------------
+Training Trainset 80%% Binary Classification with 4 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 80%% of the remaining data...
+Done.
+30
+---- RESULTS Trainset 80%% Binary Classification NEURONS = 4 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 46.564774
+Min Training Cost: 1.906754
+Testing Error: 0.000000
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 0
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 0
+Total Error % : 0
+--------------------
+Training Trainset 80%% Binary Classification with 5 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 80%% of the remaining data...
+Done.
+30
+---- RESULTS Trainset 80%% Binary Classification NEURONS = 5 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 51.775103
+Min Training Cost: 1.751057
+Testing Error: 0.000000
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 0
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 0
+Total Error % : 0
+--------------------
+Training Trainset 80%% Binary Classification with 6 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 80%% of the remaining data...
+Done.
+30
+---- RESULTS Trainset 80%% Binary Classification NEURONS = 6 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 51.609070
+Min Training Cost: 1.822988
+Testing Error: 0.000000
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 0
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 0
+Total Error % : 0
+--------------------
+Training Trainset 80%% Binary Classification with 7 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 80%% of the remaining data...
+Done.
+30
+---- RESULTS Trainset 80%% Binary Classification NEURONS = 7 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 50.751200
+Min Training Cost: 1.771836
+Testing Error: 0.000000
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 0
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 0
+Total Error % : 0
+--------------------
+Training Trainset 80%% Binary Classification with 8 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 80%% of the remaining data...
+Done.
+30
+---- RESULTS Trainset 80%% Binary Classification NEURONS = 8 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 59.949303
+Min Training Cost: 1.798815
+Testing Error: 0.000000
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 0
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 0
+Total Error % : 0
+--------------------
+Training Trainset 80%% Binary Classification with 9 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 80%% of the remaining data...
+Done.
+30
+---- RESULTS Trainset 80%% Binary Classification NEURONS = 9 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 67.583808
+Min Training Cost: 1.806180
+Testing Error: 0.000000
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 0
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 0
+Total Error % : 0
+--------------------
+Training Trainset 80%% Binary Classification with 10 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 80%% of the remaining data...
+Done.
+30
+---- RESULTS Trainset 80%% Binary Classification NEURONS = 10 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 76.917313
+Min Training Cost: 1.793136
+Testing Error: 0.000000
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 0
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 0
+Total Error % : 0
+--------------------
+Training Trainset 90%% Binary Classification with 4 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 90%% of the remaining data...
+Done.
+15
+---- RESULTS Trainset 90%% Binary Classification NEURONS = 4 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 50.241914
+Min Training Cost: 1.866960
+Testing Error: 0.000000
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 0
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 0
+Total Error % : 0
+--------------------
+Training Trainset 90%% Binary Classification with 5 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 90%% of the remaining data...
+Done.
+15
+---- RESULTS Trainset 90%% Binary Classification NEURONS = 5 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 55.724549
+Min Training Cost: 1.759531
+Testing Error: 0.000000
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 0
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 0
+Total Error % : 0
+--------------------
+Training Trainset 90%% Binary Classification with 6 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 90%% of the remaining data...
+Done.
+15
+---- RESULTS Trainset 90%% Binary Classification NEURONS = 6 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 57.067957
+Min Training Cost: 1.816440
+Testing Error: 0.000000
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 0
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 0
+Total Error % : 0
+--------------------
+Training Trainset 90%% Binary Classification with 7 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 90%% of the remaining data...
+Done.
+15
+---- RESULTS Trainset 90%% Binary Classification NEURONS = 7 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 55.047730
+Min Training Cost: 1.779187
+Testing Error: 0.000000
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 0
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 0
+Total Error % : 0
+--------------------
+Training Trainset 90%% Binary Classification with 8 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 90%% of the remaining data...
+Done.
+15
+---- RESULTS Trainset 90%% Binary Classification NEURONS = 8 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 65.051474
+Min Training Cost: 1.802952
+Testing Error: 0.000000
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 0
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 0
+Total Error % : 0
+--------------------
+Training Trainset 90%% Binary Classification with 9 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 90%% of the remaining data...
+Done.
+15
+---- RESULTS Trainset 90%% Binary Classification NEURONS = 9 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 73.203559
+Min Training Cost: 1.802069
+Testing Error: 0.000000
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 0
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 0
+Total Error % : 0
+--------------------
+Training Trainset 90%% Binary Classification with 10 neurons, 500 epochs and alpha = 0.100000...
+Done.
+Predicting using 90%% of the remaining data...
+Done.
+15
+---- RESULTS Trainset 90%% Binary Classification NEURONS = 10 EPOCHS = 500 ALPHA = 0.100000----
+Max Training Cost: 86.173810
+Min Training Cost: 1.801186
+Testing Error: 0.000000
+False Positives Iris-Setosa: 0
+False Negatives Iris-Setosa: 0
+False Positives Iris-Versicolor: 0
+False Negatives Iris-Versicolor: 0
+False Positives Iris-Virginica: 0
+False Negatives Iris-Virginica: 0
+Total Error % : 0
+--------------------

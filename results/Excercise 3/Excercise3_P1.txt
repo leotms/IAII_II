@@ -455,4 +455,3 @@ False Positives: 0
 False Negatives: 0
 Total Error % : 0
 --------------------
-Press enter to finish...

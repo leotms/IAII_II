@@ -56,6 +56,9 @@ if __name__ == "__main__":
         iter_vs_cost = train(network, besttrainset, alpha, epochs, n_outputs)
         print("Done.")
 
+        # Draw the cost curve
+        draw_cost_curve(datasetname, iter_vs_cost, alpha, neurons)
+        
         # save cost for later
         label = "%d Neurons"%(neurons)
         iter_vs_cost.append(label)
