@@ -1,3 +1,7 @@
+# Feedforward Neural Network using Backpropagation.
+
+Implementation of a feedforward Neural Network using backpropagation for solving pattern classification problems.
+
 ## Requirements:
   - Python 3.x
   - Numpy
@@ -37,4 +41,4 @@
 - [Nicolás Mañan](https://github.com/nmanan)
 - [Joel Rivas](https://github.com/JoelRg)
 
-### Last Updated: 06/03/2017
+### Last Updated: 04/03/2017
